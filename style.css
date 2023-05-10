@@ -1,0 +1,92 @@
+:root {
+    --background: rgb(60, 60, 60);
+    --edge: white;
+    --text: fuchsia;
+    --code: white;
+    --glow: fuchsia;
+
+}
+
+* {
+    font-family: sans-serif;
+    color: var(--text);
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+
+body {
+    padding: 1vh 1vw;
+    background: var(--background);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between ;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 0 0 100%;
+    padding: 2lh 1vw;
+}
+
+figure {
+    position: relative;
+    border: dashed var(--edge) 3px;
+  
+}
+
+figure:hover {
+    box-shadow: inset 0px 0px 8px var(--glow), 0 0 15px var(--glow);
+}
+
+figure > * {
+    padding: 0.5lh;
+    
+}
+
+figure > p {
+    padding-top: 1.5lh;
+}
+
+figcaption {
+    position: absolute;
+    top: -1lh;
+    min-width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-weight: bold;
+    font-size: 150%;
+    padding: 0.25lh 0.5vw;
+    background: var(--background);
+    border: solid var(--edge) 2px;
+    border-radius: 8px;
+}
+
+
+
+pre {
+    padding: 1lh;
+    font-family: monospace;
+    font-size: 125%;
+    border-radius: 8px;
+    color: var(--code);
+    background: linear-gradient(0deg, fuchsia, rgb(181, 28, 181));
+    margin: 1vw;
+}
+
+@media screen and (min-width: 768px) {
+    .card {
+         flex: 0 0 50%;
+    }
+}
+
+@media screen and (min-width: 996px) {
+    .card {
+        flex: 0 0 33%;
+    }
+}
+
+
